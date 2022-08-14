@@ -30,7 +30,8 @@ async def main():
     print("Starting.................")
     t1 = asyncio.create_task(io_bound_task1(2))
     t2 = asyncio.create_task(io_bound_task2(4))
-    await t1, t2
+    await t1
+    await t2
 
 
 if __name__ == "__main__":
